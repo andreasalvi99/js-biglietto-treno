@@ -2,9 +2,19 @@
 const kmToDo = parseInt(prompt("Quanti km devi percorrere?"));
 console.log("kmToDo:", kmToDo);
 
+if (isNaN(kmToDo)) {
+  alert("Non sono ammesse lettere");
+  throw new Error("L'utente ha inserito un valore non ammesso");
+}
+
 // L'età del passeggero.
 const age = parseInt(prompt("Inserisci la tua età"));
 console.log("age:", age);
+
+if (isNaN(age)) {
+  alert("Non sono ammesse lettere");
+  throw new Error("L'utente ha inserito un valore non ammesso");
+}
 
 // Il prezzo del biglietto è definito in base ai km (0.21 € al km)
 const ticketPrice = (kmToDo * 0.21).toFixed(2);
