@@ -39,3 +39,8 @@ if (age < 18) {
   );
   console.log("overAgeTick:", overAgeTick + "€");
 }
+// SE passeggero ha età compresa tra 18 e 65
+if (age > 18 && age < 65);
+{
+  alert("Il costo del tuo biglietto è" + " " + ticketPrice + "€");
+}
