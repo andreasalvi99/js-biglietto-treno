@@ -8,7 +8,7 @@ console.log("age:", age);
 
 // Il prezzo del biglietto è definito in base ai km (0.21 € al km)
 const ticketPrice = parseInt(kmToDo * 0.21);
-console.log("ticketPrice:", ticketPrice);
+console.log("ticketPrice:", ticketPrice + "€");
 
 // Va applicato uno sconto del 20% per i minorenni
 const underAgeDisc = (ticketPrice * 20) / 100;
@@ -17,7 +17,7 @@ const underAgeTick = (ticketPrice - underAgeDisc).toFixed(2);
 //  SE passeggero ha età < di 18 anni applica sconto
 if (age < 18) {
   alert("Hai diritto a uno sconto del 20%");
-  console.log("underAgeTick:", underAgeTick);
+  console.log("underAgeTick:", underAgeTick + "€");
 }
 
 // Va applicato uno sconto del 40% per gli over 65.
@@ -26,5 +26,5 @@ const overAgeTick = (ticketPrice - overAgeDisc).toFixed(2);
 
 if (age > 65) {
   alert("Hai diritto a uno sconto del 40%");
-  console.log("overAgeTick:", overAgeTick);
+  console.log("overAgeTick:", overAgeTick + "€");
 }
