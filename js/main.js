@@ -12,7 +12,7 @@ console.log("ticketPrice:", ticketPrice);
 
 // Va applicato uno sconto del 20% per i minorenni
 const underAgeDisc = (ticketPrice * 20) / 100;
-const underAgeTick = ticketPrice - underAgeDisc;
+const underAgeTick = (ticketPrice - underAgeDisc).toFixed(2);
 
 //  SE passeggero ha età < di 18 anni applica sconto
 if (age < 18) {
@@ -22,7 +22,7 @@ if (age < 18) {
 
 // Va applicato uno sconto del 40% per gli over 65.
 const overAgeDisc = (ticketPrice * 40) / 100;
-const overAgeTick = ticketPrice - overAgeDisc;
+const overAgeTick = (ticketPrice - overAgeDisc).toFixed(2);
 
 if (age > 65) {
   alert("Hai diritto a uno sconto del 40%");
