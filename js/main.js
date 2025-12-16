@@ -26,8 +26,13 @@ if (yourName === "stefano") {
   }
 
   // Il prezzo del biglietto è definito in base ai km (0.21 € al km)
-  const ticketPrice = (kmToDo * 0.21).toFixed(2);
+  let ticketPrice = (kmToDo * 0.21).toFixed(2);
   console.log("ticketPrice:", ticketPrice + "€");
+
+  if (yourName === "tiziano") {
+    ticketPrice = (kmToDo * 0.5).toFixed(2);
+    alert("Il costo del tuo biglietto è" + " " + ticketPrice + "€");
+  }
 
   // SE passeggero ha età compresa tra 18 e 65
   if (age > 18 && age < 65);
@@ -42,7 +47,7 @@ if (yourName === "stefano") {
     const underAgeTick = (ticketPrice - underAgeDisc).toFixed(2);
 
     alert(
-      "Hai diritto a uno sconto del 20% \n Il costo del tuo biglietto é" +
+      "Hai diritto a uno sconto del 20% \n Ora il costo del tuo biglietto é" +
         " " +
         underAgeTick +
         "€"
@@ -55,7 +60,7 @@ if (yourName === "stefano") {
     const overAgeTick = (ticketPrice - overAgeDisc).toFixed(2);
 
     alert(
-      "Hai diritto a uno sconto del 40% \n Il costo del tuo biglietto é" +
+      "Hai diritto a uno sconto del 40% \n Ora il costo del tuo biglietto é" +
         " " +
         overAgeTick +
         "€"
