@@ -1,5 +1,5 @@
 // Il programma dovrà chiedere all'utente il suo nome
-const yourName = prompt("Inserisci il tuo nome");
+let yourName = prompt("Inserisci il tuo nome").toLowerCase().trim();
 console.log("yourName:", yourName);
 
 if (yourName === "stefano") {
