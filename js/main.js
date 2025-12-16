@@ -2,15 +2,19 @@
 const kmToDo = parseInt(prompt("Quanti km devi percorrere?"));
 console.log("kmToDo:", kmToDo);
 
-// if(isNaN(kmToDo))
-
 // L'età del passeggero.
 const age = parseInt(prompt("Inserisci la tua età"));
 console.log("age:", age);
 
 // Il prezzo del biglietto è definito in base ai km (0.21 € al km)
-const ticketPrice = kmToDo * 0.21;
+const ticketPrice = (kmToDo * 0.21).toFixed(2);
 console.log("ticketPrice:", ticketPrice + "€");
+
+// SE passeggero ha età compresa tra 18 e 65
+if (age > 18 && age < 65);
+{
+  alert("Il costo del tuo biglietto è" + " " + ticketPrice + "€");
+}
 
 //  SE passeggero ha età < di 18 anni applica sconto
 if (age < 18) {
@@ -19,7 +23,7 @@ if (age < 18) {
   const underAgeTick = (ticketPrice - underAgeDisc).toFixed(2);
 
   alert(
-    "Hai diritto a uno sconto del 20%, Il costo del tuo biglietto é" +
+    "Hai diritto a uno sconto del 20% \n Il costo del tuo biglietto é" +
       " " +
       underAgeTick +
       "€"
@@ -32,15 +36,10 @@ if (age < 18) {
   const overAgeTick = (ticketPrice - overAgeDisc).toFixed(2);
 
   alert(
-    "Hai diritto a uno sconto del 40%, Il costo del tuo biglietto é" +
+    "Hai diritto a uno sconto del 40% \n Il costo del tuo biglietto é" +
       " " +
       overAgeTick +
       "€"
   );
   console.log("overAgeTick:", overAgeTick + "€");
-}
-// SE passeggero ha età compresa tra 18 e 65
-if (age > 18 && age < 65);
-{
-  alert("Il costo del tuo biglietto è" + " " + ticketPrice + "€");
 }
