@@ -14,19 +14,28 @@ console.log("ticketPrice:", ticketPrice + "€");
 
 //  SE passeggero ha età < di 18 anni applica sconto
 if (age < 18) {
-  alert("Hai diritto a uno sconto del 20%");
-  console.log("underAgeTick:", underAgeTick + "€");
-
   // Va applicato uno sconto del 20% per i minorenni
   const underAgeDisc = (ticketPrice * 20) / 100;
   const underAgeTick = (ticketPrice - underAgeDisc).toFixed(2);
 
+  alert(
+    "Hai diritto a uno sconto del 20%, Il costo del tuo biglietto é" +
+      " " +
+      underAgeTick +
+      "€"
+  );
+  console.log("underAgeTick:", underAgeTick + "€");
   //  SE passeggero ha età > di 65 anni applica sconto
 } else if (age > 65) {
-  alert("Hai diritto a uno sconto del 40%");
-  console.log("overAgeTick:", overAgeTick + "€");
-
   // Va applicato uno sconto del 40% per gli over 65.
   const overAgeDisc = (ticketPrice * 40) / 100;
   const overAgeTick = (ticketPrice - overAgeDisc).toFixed(2);
+
+  alert(
+    "Hai diritto a uno sconto del 40%, Il costo del tuo biglietto é" +
+      " " +
+      overAgeTick +
+      "€"
+  );
+  console.log("overAgeTick:", overAgeTick + "€");
 }
